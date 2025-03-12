@@ -2,6 +2,7 @@ let buttons = document.getElementsByClassName("buttons");
 
 function setActiveSubject(activeSubject){
     if (activeSubject) {
+        document.title=activeSubject;
         Array.from(buttons).forEach(button => {
             if (button.innerHTML.trim() === activeSubject) {
                 button.classList.add("active");
