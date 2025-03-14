@@ -4,6 +4,7 @@
 }
 
 :root {
+  --font-xs: 18px;
   --font-sm: 24px;
   --font-md: 32px;
   --font-lg: 36px;
@@ -17,7 +18,8 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: var(--font-sm);
   background-color: var(--secondary-color);
   display: flex;
@@ -55,17 +57,16 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
-  font-size: var(--font-md);
+  font-size: var(--font-sm);
 }
 
 .navbar .nav-elements a {
   margin: 0px 20px;
   color: gray;
+  transition: all 200ms ease-in-out;
 }
 
 .navbar .nav-elements a:hover {
-  margin: 0px 20px;
-  text-decoration: underline;
   color: black;
 }
 
@@ -156,10 +157,20 @@ section {
 }
 
 .main .right {
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  font-size: var(--font-lg);
   padding: 0 32px;
+}
+
+.main .right p {
+  text-align: center;
+  font-size: var(--font-md);
+  font-weight: 500;
+}
+
+.main .right .secondary {
+  font-size: var(--font-xs);
+  font-weight: lighter;
 }
 
 .resources .box {
@@ -220,8 +231,9 @@ section {
   font-size: var(--font-lg);
 }
 .about .left {
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .about .left h2 {
   font-size: var(--font-md);
@@ -338,7 +350,8 @@ section {
     width: 400px;
     height: 400px;
   }
-  .main .right {
+
+  .main .right .primary {
     font-size: var(--font-sm);
     align-items: center;
   }
@@ -395,10 +408,8 @@ section {
     max-height: 100%;
   }
 
-  .main .right {
-    align-items: flex-start;
-    justify-content: center;
-    font-size: var(--font-md);
+  .main .right .primary {
+    font-size: var(--font-sm);
     padding: 0 32px;
   }
 
